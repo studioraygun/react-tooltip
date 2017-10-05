@@ -1,0 +1,42 @@
+/**
+	react-tooltip skeleton css
+	only edit this file if absolutely necessary.
+	to change tooltip appearance edit Tooltip-Theme.css
+*/
+ 
+.tooltip{
+	/* wrapper */
+}
+
+/* on hover display the tooltip */
+.tooltip:hover .tooltip__tip{
+	display:block;
+}
+
+/* the tool tip text content */
+.tooltip__text{
+	position:relative;
+}
+
+/* the tooltip tip content */
+.tooltip__tip{
+	display:none;
+	width:150px;
+	padding:0.3rem 0.5rem;
+	text-align:center;
+	position:absolute;
+}
+
+/* styles for top-positioned tooltips */
+.tooltip__tip.top{
+	bottom:30px;
+	left:50%;
+	transform:translateX(-50%);
+}
+
+/* styles for bottom-positioned tooltips */
+.tooltip__tip.bottom{
+	top:30px;
+	left:50%;
+	transform:translateX(-50%);
+}

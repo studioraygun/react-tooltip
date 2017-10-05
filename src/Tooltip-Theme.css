@@ -1,0 +1,64 @@
+/**
+	react-tooltip thene css
+	this file controls the appearance of the tooltip - please edit to suit your needs
+*/
+
+/* the tool tip text content */
+.tooltip__text{
+	border-bottom:1px dashed;
+	text-decoration:none;
+	color:inherit;
+}
+
+/* do something with the text on hover - optional */
+.tooltip__text:hover{
+	color:red;
+}
+
+/* define basic animation for tooltips */
+@keyframes tooltipAnim{
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+/* the tooltip tip content */
+.tooltip__tip{
+	background-color:rgba(0,0,0,0.85);
+	color:#fff;
+	border-radius:2px;
+	animation:tooltipAnim 0.15s ease-in;
+}
+
+/* create the arrow for top-positioned tooltips */
+.tooltip__tip.top:after{
+	content:'';
+	position:absolute;
+	bottom:0;
+	left:50%;
+	width:0;
+	height:0;
+	border:6px solid transparent;
+	border-top-color:rgba(0,0,0,0.85);
+	border-bottom:0;
+	margin-left:-6px;
+	margin-bottom:-6px;;
+}
+
+/* create the arrow for bottom-positioned tooltips */
+.tooltip__tip.bottom:after{
+	content:'';
+	position:absolute;
+	top:0;
+	left:50%;
+	width:0;
+	height:0;
+	border:6px solid transparent;
+	border-bottom-color:rgba(0,0,0,0.85);
+	border-top:0;
+	margin-left:-6px;
+	margin-top:-6px;;
+}
